@@ -5,6 +5,7 @@ class ChartsAttribute {
     
     
     func initAttribute() {
+        
         // 合併圖: 可同時包含所有類型線圖的表格(折線、K線、柱狀等)
         let combinedChartView = CombinedChartView()
         // 折線圖
