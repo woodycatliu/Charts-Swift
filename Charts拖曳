@@ -5,7 +5,8 @@ Data數量大於X軸，拖曳ChartView顯示其他數據，如CollectionView表�
     
 	//固定X軸顯示最大數量chartView.setVieibleXRangeMaximum(nums)
 	//禁止X軸縮放
-	chartView.scaleXEnabled = false
+	chartView.s
+	caleXEnabled = false
 	//禁止Y軸縮放(可選)
 	chatView.scaleYEanbled = false
 	//開啟拖曳
