@@ -67,7 +67,6 @@ extension ChartXAxisFormatter: IAxisValueFormatter {
     
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
         guard let dateFormatter = dateFormatter else { return "" }
-        print(123)
         let date = Date(timeIntervalSince1970: value )
         return dateFormatter.string(from: date)
     }
