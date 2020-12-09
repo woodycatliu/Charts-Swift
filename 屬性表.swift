@@ -145,11 +145,82 @@ class ChartsAttribute {
         // legend 圖示之間的間隔，需搭配 dataSet.colors 設定
         // dataSet.colors = [color1, color2, color3]
         legend.xEntrySpace = 4
-
-
-
     }
 
-    
+     // MARK: ChartDataEntry 提供圖表數據，以陣列方式提供給 ChartDataSet
+    func setDataEntry() {
+        // BaseDataEntry
+        _ = ChartDataEntry()
+        // 柱狀圖DataEntty
+        _ = BarChartDataEntry()
+        // 氣泡圖DataEntry
+        _ = BubbleChartDataEntry()
+        // 蠟燭DataEntry
+        _ = CandleChartDataEntry()
+        // 派圖DataEntry
+        _ = PieChartDataEntry()
+        // 雷達圖
+        _ = RadarChartDataEntry()
+        
+        // x 軸數據 y軸數據
+        // icon: 小圖示(可顯示在數據上面
+        let dataEntry = ChartDataEntry(x: 0, y: 0, icon: UIImage(), data: Data())
+        
+        // 表示圖表的各條目的設定。
+        // 提供圖表實際數據 [dataEntry]
+        _ = ChartDataSet()
+        // 柱狀圖
+        _ = BarChartDataSet()
+        // 派圖
+        _ = PieChartDataSet()
+        // 線圖
+        _ = LineChartDataSet()
+        // 雷達圖
+        _ = RadarChartDataSet()
+        // 氣泡圖
+        _ = BubbleChartDataSet()
+        // 蠟燭圖
+        _ = CandleChartDataSet()
+        // 散狀圖
+        _ = ScatterChartDataSet()
+        // label: legend 標籤文字
+        let dataSet = ChartDataSet(entries: [dataEntry], label: "1234")
+        
+        // 是否繪製 icon
+        dataSet.drawIconsEnabled = true
+        // 是否在圖表上顯示Y值
+        dataSet.drawValuesEnabled = true
+        // 檢查是否繪製icon
+        _ = dataSet.isDrawIconsEnabled
+        // 檢查是否繪製Y值
+        _ = dataSet.isDrawValuesEnabled
+        // 檢查是否開啟高亮
+        _ = dataSet.isHighlightEnabled
+        
+        
+        // 封裝 ChartData ，必須依照相對屬性配置
+        _ = ChartData()
+        // 折線圖
+        _ = LineChartData()
+        // 柱狀圖
+        _ = BarChartData()
+        // 氣泡圖
+        _ = BubbleChartData()
+        // 蠟燭圖
+        _ = CandleChartData()
+        // 派圖
+        _ = PieChartData()
+        // 雷達圖
+        _ = RadarChartData()
+        // 散落圖
+        _ = ScatterChartData()
+        
+        let chartData = ChartData(dataSet: dataSet)
+        _ = ChartData(dataSets: [dataSet])
+        
+        // use
+        chartView.data = chartData
+        
+    }
     
 }
