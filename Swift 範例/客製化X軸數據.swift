@@ -132,3 +132,35 @@ class MyStringFormatter {
         return newDate.timeIntervalSince1970
     }
     
+
+
+
+
+    // MARK: 簡易飯例
+
+    //use 範例
+class YourAxisValueFormatter: IAxisValueFormatter{
+
+    func stringForValue(_ value: Double, axis: AxisBase?) -> String {
+
+        if value >= 100 && value < 1000 {
+            return "Hundred"
+        } else {
+            return String(value)
+        }  
+    }
+}
+
+
+
+class viewController: ViewController {
+    
+    lazy var chartView: LineChartView = LineChartView()
+    override func viewDidLoad(){
+        super.viewDidLoad()
+
+        let xAxis = chartView.xAxis
+        xAxis.valueFormatter = YourAxisValueFormatter()
+
+    }
+}
