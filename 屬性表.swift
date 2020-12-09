@@ -52,7 +52,7 @@ class ChartsAttribute {
         // 圖例隱藏
         combinedChartView.legend.enabled = false
         
-        // 設定圖表X軸數據可視最大數量
+        // 設定圖表X軸數據可視最大範圍 (依照輸入X軸的單位)
         combinedChartView.setVisibleXRangeMaximum(5)
         
     }
