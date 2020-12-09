@@ -116,6 +116,40 @@ class ChartsAttribute {
         yAxisLeft.axisMaximum = 500
         
     }
+
+
+
+    // MARK: （Legend）圖例是圖表的側面部分，給出了每個系列的簡短文字說明。您可以在此圖例中指定與每個系列關聯的文本
+    // Lsgend 圖示：顯示線圖的顏色圖示
+    func showLegend() {
+
+        let legend = chartView.legend
+        // 預設 false
+        legend.enabled = true
+        // legend 水平位子
+        legend.horizontalAlignment = .left
+        // legend 垂直位子
+        legend.verticalAlignment = .bottom
+        // legend 圖示位子 (水平 label 左邊, 垂直 label 上面)
+        legend.orientation = .horizontal
+        // legend 繪製區塊 (inside: 繪製在圖表裡)
+        legend.drawInside = true
+        // legend 圖示形狀
+        legend.form = .line
+        // legend 圖示尺寸
+        legend.formSize = 9
+        // legend label 文字
+        legend.font = .systemFont(ofSize: 20)
+        // legend label 文字顏色
+        legend.textColor = .blue
+        // legend 圖示之間的間隔，需搭配 dataSet.colors 設定
+        // dataSet.colors = [color1, color2, color3]
+        legend.xEntrySpace = 4
+
+
+
+    }
+
     
     
 }
