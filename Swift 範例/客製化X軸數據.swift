@@ -41,8 +41,9 @@
         // force: 為true x軸數據會平均分配
         xAxis.setLabelCount( (13 - 8) + 1, force: true)
        
-        //此方法無法設定最大可顯示範圍，會造成X軸每一個數字相同。尚未找到解決方法
-        //chartView.setVisibleXRangeMaximum(6)
+        //設定最大可顯示(數據)範圍．範例設定的為TimeInterval (秒)為單位，所以務必要設定好範圍
+        // 1hr = 1800s
+        chartView.setVisibleXRangeMaximum(3600)
 
         
     }
