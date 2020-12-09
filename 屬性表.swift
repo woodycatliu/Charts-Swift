@@ -190,6 +190,55 @@ class ChartsAttribute {
         dataSet.drawIconsEnabled = true
         // 是否在圖表上顯示Y值
         dataSet.drawValuesEnabled = true
+        // 圖表要依賴哪一側Y值（如果你有兩側Y值且數據不同）
+        dataSet.axisDependency = .left
+        // 設定圖表顏色(單色)
+        dataSet.setColor(UIColor)
+        // 設定圖表顏色（多色）
+        dataSet.setColors([UIColor])
+
+
+        // 蠟燭(K線)獨有，設定開盤收盤顏色
+        // 開盤 = 收盤
+        candleDataSet.neutralColor = UIColor()
+    
+        // 開盤 > 收盤
+        candleDataSet.increasingColor
+    
+        // 開盤 < 收盤
+        candleDataSet.odecreasingColor
+        // 是否填滿顏色-開盤 > 收盤
+        candleDataSet.increasingFilled
+        // 是否填滿顏色-開盤 < 收盤
+        candleDataSet.creasingFilled
+
+        
+    
+
+
+
+        // 部分圖有: Line圖 
+        // 是否填充折線圖線下顏色
+        // (Charts Fill 協議)
+        lineDataSet.fill = Fill() 
+        // 透明度
+        lineDataSet.fillAlpha = 1
+        // 設定線圖Y值圓點顏色
+        lineDataSet.setCircleColor(.black)
+        // 設定線圖Y值圓點半徑
+        lineDataSet.circleRadius = 3
+        // 是否繪製圓點
+        lineDataSet.drawCircleHoleEnabled = false
+        // 圖例style線的長度
+        lineDataSet.formLineDashLengths = [2, 2.5]
+        //圖例style線的寬度
+        lineDataSet.formLineWidth = 1
+        //圖例style線 尺寸
+        lineDataSet.formSize = 5
+
+
+        
+
         // 檢查是否繪製icon
         _ = dataSet.isDrawIconsEnabled
         // 檢查是否繪製Y值
