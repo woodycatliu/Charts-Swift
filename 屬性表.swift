@@ -83,6 +83,8 @@ class ChartsAttribute {
         xAxis.axisMinimum = 0
         xAxis.axisMaximum = 500
         
+        // 顯示x軸標籤: 是
+        xAxis.drawLabelsEnabled = true
     }
     
     
