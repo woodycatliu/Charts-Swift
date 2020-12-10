@@ -237,6 +237,11 @@ class ChartsAttribute {
         lineDataSet.formLineWidth = 1
         //圖例style線 尺寸
         lineDataSet.formSize = 5
+        // 線圖繪圖模式
+        // cubicBezier: 三次方貝爾曲線
+        // stepped: 像樓梯
+        // 
+        lineDataSet.mode = .cubicBezier
 
 
         
