@@ -136,9 +136,8 @@ class MyStringFormatter {
 
 
 
-    // MARK: 簡易飯例
-
-    //use 範例
+// MARK: 簡易飯例
+//use 範例
 class YourAxisValueFormatter: IAxisValueFormatter{
 
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
