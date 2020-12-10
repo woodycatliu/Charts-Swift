@@ -12,6 +12,8 @@ class ChartsAttribute {
         _ = LineChartView()
         // 柱狀圖
         _ = BarChartView()
+        // 水平柱狀圖
+        _ = HorizontalBarChartView()
         
         /*基本屬性*/
         
