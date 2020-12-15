@@ -9,13 +9,13 @@ X 軸相同
 class MyYAxis : YAxisRenderer {
     override func drawYLabels(context: CGContext, fixedPosition: CGFloat, positions: [CGPoint], offset: CGFloat, textAlign: NSTextAlignment)
     {
-        let labelFont = axis.labelFont
-        let labelTextColor = axis.labelTextColor
+        guard let yAxis = self.axis as? YAxis else { return }
+        let labelFont = yAxis.labelFont
+
+        let from = yAxis.isDrawBottomYLabelEntryEnabled ? 0 : 1
+        let to = yAxis.isDrawTopYLabelEntryEnabled ? yAxis.entryCount : (yAxis.entryCount - 1)
         
-        let from = axis.isDrawBottomYLabelEntryEnabled ? 0 : 1
-        let to = axis.isDrawTopYLabelEntryEnabled ? axis.entryCount : (axis.entryCount - 1)
-        
-        let xOffset = axis.labelXOffset
+        let xOffset = yAxis.labelXOffset
         
         for i in from..<to
         {
@@ -34,7 +34,7 @@ class MyYAxis : YAxisRenderer {
                     color = .black
                 }
             }else { color = .green }
-            context.drawText(text, at: CGPoint(x: fixedPosition + xOffset, y: positions[i].y + offset), align: textAlign, attributes: [.font: labelFont, .foregroundColor: color])
+            ChartUtils.drawText(context: context, text: text, point: CGPoint(x: fixedPosition + xOffset, y: positions[i].y + offset), align: textAlign, attributes: [.font: labelFont, .foregroundColor: color])
         }
     }
     
