@@ -122,6 +122,9 @@ class ChartsAttribute {
         // Y軸顯示數據(不設定自動計算)，會影響圖表顯示範圍
         yAxisLeft.axisMinimum = 0
         yAxisLeft.axisMaximum = 500
+
+        // 設定 Y軸標籤數量(自動計算，起始線回最小值。 force: 是否平均分配)
+        yAxis.setLabelCount(range.yAxisLabelCount(), force: true)
         
     }
 
