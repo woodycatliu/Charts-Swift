@@ -87,6 +87,12 @@ class ChartsAttribute {
         
         // 顯示x軸標籤: 是
         xAxis.drawLabelsEnabled = true
+
+        // 設定 x軸標籤數量(自動計算，不一定從起始線不一定是最小值)
+        xAxis.labelCount = Int
+
+        // 設定 x軸標籤數量(自動計算，起始線回最小值。 force: 是否平均分配)
+        xAxis.setLabelCount(range.xAxisLabelCount(), force: true)
     }
     
     
